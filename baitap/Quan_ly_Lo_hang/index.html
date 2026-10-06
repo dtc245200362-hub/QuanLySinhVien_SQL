@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Lô Hàng - Gộp Lô Sản Phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hệ Thống Quản Lý Lô Hàng</h1>
+
+        <!-- Khối danh sách lô ban đầu -->
+        <section class="card">
+            <h2>Danh sách các lô hàng hiện tại</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã lô (Lot ID)</th>
+                        <th>Mã sản phẩm (Product ID)</th>
+                        <th>Số lượng</th>
+                        <th>Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody id="original-lots-body">
+                    <!-- Dữ liệu được đổ tự động từ main.js -->
+                </tbody>
+            </table>
+            <button id="btn-merge" class="btn-primary">Gộp các lô cùng sản phẩm</button>
+        </section>
+
+        <!-- Khối kết quả sau khi gộp -->
+        <section class="card" id="result-section" style="display: none;">
+            <h2>Kết quả sau khi gộp lô</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã lô mới (New Lot ID)</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Tổng số lượng</th>
+                        <th>Các lô thành phần</th>
+                    </tr>
+                </thead>
+                <tbody id="merged-lots-body">
+                    <!-- Dữ liệu được đổ tự động từ main.js -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
